@@ -55,3 +55,13 @@ docker container create --name env --env APP_PORT=9090 -p 8080:8080 arlodel/env
 docker container start env
 docker container logs env
 curl http://localhost:9090
+
+# VOLUME instruction is used to create a mount point in the Docker image that can be used to persist data or share data between the host machine and the container.
+docker build -t arlodel/volume volume
+docker image inspect arlodel/volume
+docker container create --name volume --env APP_PORT=8080 -p 8080:8080 arlodel/volume
+docker container start volume
+docker container logs volume
+docker container inspect volume
+# 31a0b6b3cd01f8e37693031c9e45d6d57b2e975ddc5decacb975ba28d4263875
+docker volume ls
