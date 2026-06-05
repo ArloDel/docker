@@ -15,3 +15,7 @@ docker image inspect arlodel/command
 docker container create --name command arlodel/command
 docker container start command
 docker container logs command
+
+# LABEL instruction is used to add metadata to the Docker image in the form of key-value pairs.
+docker build -t arlodel/label label
+docker image inspect arlodel/label
