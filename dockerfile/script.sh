@@ -38,3 +38,11 @@ docker build -t arlodel/dockerignore .dockerignore
 docker container create --name dockerignore arlodel/dockerignore
 docker container start dockerignore
 docker container logs dockerignore
+
+
+# EXPOSE instruction is used to specify the network ports that a container listens on at runtime.
+docker build -t arlodel/expose expose
+docker image inspect arlodel/expose
+docker container create --name expose -p 8080:8080 arlodel/expose
+docker container start expose
+curl http://localhost:8080
