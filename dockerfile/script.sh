@@ -46,3 +46,12 @@ docker image inspect arlodel/expose
 docker container create --name expose -p 8080:8080 arlodel/expose
 docker container start expose
 curl http://localhost:8080
+
+
+# ENV instruction is used to set environment variables in the Docker image that can be accessed by the application running inside the container.
+docker build -t arlodel/env env
+docker image inspect arlodel/env
+docker container create --name env --env APP_PORT=9090 -p 8080:8080 arlodel/env
+docker container start env
+docker container logs env
+curl http://localhost:9090
