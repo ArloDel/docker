@@ -19,3 +19,9 @@ docker container logs command
 # LABEL instruction is used to add metadata to the Docker image in the form of key-value pairs.
 docker build -t arlodel/label label
 docker image inspect arlodel/label
+ 
+# ADD instruction is used to copy files and directories from the host machine to the Docker image during the build process.
+docker build -t arlodel/add add
+docker container create --name add arlodel/add
+docker container start add
+docker container logs add
