@@ -31,3 +31,10 @@ docker build -t arlodel/copy copy
 docker container create --name copy arlodel/copy
 docker container start copy
 docker container logs copy
+
+
+# .gitignore is used to specify files and directories that should be ignored by Git when committing changes to a repository. .dockerignore is used to specify files and directories that should be ignored by Docker when building an image.
+docker build -t arlodel/dockerignore .dockerignore
+docker container create --name dockerignore arlodel/dockerignore
+docker container start dockerignore
+docker container logs dockerignore
