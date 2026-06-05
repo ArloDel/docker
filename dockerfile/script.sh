@@ -7,3 +7,11 @@ docker image ls
 docker build -t arlodel/run run
 docker image ls
 docker build -t arlodel/run run --progress=plain --no-cache
+
+
+# CMD instruction is used to specify the default command to run when a container is started from the image.
+docker build -t arlodel/command command
+docker image inspect arlodel/command
+docker container create --name command arlodel/command
+docker container start command
+docker container logs command
