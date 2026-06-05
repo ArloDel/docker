@@ -25,3 +25,9 @@ docker build -t arlodel/add add
 docker container create --name add arlodel/add
 docker container start add
 docker container logs add
+
+# COPY instruction is used to copy files and directories from the host machine to the Docker image during the build process, similar to ADD but without the additional features.
+docker build -t arlodel/copy copy
+docker container create --name copy arlodel/copy
+docker container start copy
+docker container logs copy
