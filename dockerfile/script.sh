@@ -72,3 +72,10 @@ docker build -t arlodel/workdir workdir
 docker container create --name workdir -p 8080:8080 arlodel/workdir
 docker container start workdir
 docker container exec -i -t workdir /bin/sh
+
+
+# USER instruction is used to specify the user that the application will run as inside the container. It allows you to set a non-root user for security purposes.
+docker build -t arlodel/user user
+docker container create --name user -p 8080:8080 arlodel/user
+docker container start user
+docker container exec -i -t user /bin/sh
