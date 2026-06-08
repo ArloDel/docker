@@ -65,3 +65,10 @@ docker container logs volume
 docker container inspect volume
 # 31a0b6b3cd01f8e37693031c9e45d6d57b2e975ddc5decacb975ba28d4263875
 docker volume ls
+
+
+# WORKDIR instruction is used to set the working directory for any subsequent instructions in the Dockerfile. It allows you to specify the directory where the application code will be copied and executed.
+docker build -t arlodel/workdir workdir
+docker container create --name workdir -p 8080:8080 arlodel/workdir
+docker container start workdir
+docker container exec -i -t workdir /bin/sh
