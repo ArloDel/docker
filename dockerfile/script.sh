@@ -99,3 +99,10 @@ docker build -t arlodel/entrypoint entrypoint
 docker container create --name entrypoint -p 8080:8080 arlodel/entrypoint
 docker container start entrypoint
 docker container logs entrypoint
+
+# Multi-stage builds is a feature in Docker that allows you to use multiple FROM statements in a single Dockerfile to create intermediate images that can be used to build the final image. It allows you to optimize the build process by separating the build environment from the runtime environment, resulting in smaller and more efficient images.
+docker build -t arlodel/multi multi
+docker image ls
+docker container create --name multi -p 8080:8080 arlodel/multi
+docker container start multi
+docker container logs multi
