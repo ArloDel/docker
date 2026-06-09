@@ -85,3 +85,11 @@ docker build -t arlodel/arg arg --build-arg app=myapp
 docker container create --name arg -p 8080:8080 arlodel/arg
 docker container start arg
 docker container exec -i -t arg /bin/sh
+
+
+# HEALTHCHECK instruction is used to specify a command that Docker can use to check the health of a container. It allows you to define a command that will be executed periodically to determine if the container is healthy or not.
+docker build -t arlodel/healthcheck healthcheck
+docker container create --name healthcheck -p 8080:8080 arlodel/healthcheck
+docker container start healthcheck
+docker container inspect healthcheck
+docker container logs healthcheck
