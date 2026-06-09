@@ -93,3 +93,9 @@ docker container create --name healthcheck -p 8080:8080 arlodel/healthcheck
 docker container start healthcheck
 docker container inspect healthcheck
 docker container logs healthcheck
+
+# ENTRYPOINT instruction is used to specify the command that will be executed when a container is started from the image. It allows you to define a fixed command that will always be executed, regardless of any additional commands provided at runtime.
+docker build -t arlodel/entrypoint entrypoint
+docker container create --name entrypoint -p 8080:8080 arlodel/entrypoint
+docker container start entrypoint
+docker container logs entrypoint
