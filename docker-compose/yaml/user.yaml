@@ -1,0 +1,19 @@
+firstname: arlo
+middlename: de
+lastname: l
+
+hobbies:
+  - coding
+  - gaming
+  - cooking
+
+address:
+  street: 123 Main St
+  city: Anytown
+  state: CA
+  zip: 12345
+wallet:
+  -type: credit
+   amount: 1000
+  -type: cash
+   amount: 200
